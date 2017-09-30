@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/tesyant/new/MovieApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1903e5fec90415df9d7a416c7d40774a97ebee79">
+        <dex dex="/Users/tesyant/new/MovieApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cdfd98660be6fe8466d16c426d70430be3fec6de/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tesyant/new/MovieApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/tesyant/new/MovieApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_447eb4e60db01f3bd70f8987a93ab26282c7b4d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tesyant/.android/build-cache/843305524415056e596db0d918c6237f1456c7aa/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d4f92bd1d1b0bafa88251fcda541517d3616d2e5">
+        <dex dex="/Users/tesyant/new/MovieApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_676bf196072652926f6e66ee76cf86efc837e106/classes.dex" />
+    </item>
+
+</items>
