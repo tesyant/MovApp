@@ -23,6 +23,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private List<Results> result;
     private Activity activity;
 
+    CustomItemClickListener listener;
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, releasedate;
         public ImageView cover;
@@ -35,22 +37,31 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         }
     }
 
-    public CustomAdapter(List<Results> result) {
+    public CustomAdapter(List<Results> result, Activity activity, CustomItemClickListener listener) {
         this.result = result;
+        this.activity=activity;
+        this.listener=listener;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_main, parent, false);
-        return new MyViewHolder(view);
+                .inflate(R.layout.activity_list_movie, parent, false);
+        final MyViewHolder myViewHolder = new MyViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onItemClick(view, myViewHolder.getAdapterPosition() );
+            }
+        });
+        return myViewHolder;
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Results search = result.get(position);
-        holder.title.setText(search.getTitle());
-        holder.releasedate.setText(search.getReleaseDate());
+//        Results search = result.get(position);
+        holder.title.setText("" + result.get(position).getTitle());
+        holder.releasedate.setText("" + result.get(position).getReleaseDate());
         Glide.with(activity).load("http://image.tmdb.org/t/p/w185" + result.get(position).getPosterPath())
                 .fitCenter().into(holder.cover);
     }

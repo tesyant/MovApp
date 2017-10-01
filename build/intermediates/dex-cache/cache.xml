@@ -2,31 +2,157 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/tesyant/new/MovieApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\57106e05fa889cb37616240f10d036a4566f28b7\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.0"
-        sha1="1903e5fec90415df9d7a416c7d40774a97ebee79">
-        <dex dex="/Users/tesyant/new/MovieApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cdfd98660be6fe8466d16c426d70430be3fec6de/classes.dex" />
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_777ec874acbf55db7ebafefbcfb3fb2f4f81a733.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/tesyant/new/MovieApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/tesyant/new/MovieApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_447eb4e60db01f3bd70f8987a93ab26282c7b4d7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tesyant/.android/build-cache/843305524415056e596db0d918c6237f1456c7aa/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\a74c093b6e7e15d9c33a79133dccf3d6f9d88710\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.0"
         sha1="d4f92bd1d1b0bafa88251fcda541517d3616d2e5">
-        <dex dex="/Users/tesyant/new/MovieApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_676bf196072652926f6e66ee76cf86efc837e106/classes.dex" />
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_bb8c89bb7fbf9701571d161a221ade3e971e298e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9_44bf52f4145dda8dd23e12fb6f8f4ee5363cdf20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\ede879b95127ee2f6ee31813cda88b120ba90666\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_09eb2a2cacc049369614d7785df1b4a4e4e81585.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\b62febe40c5a15c0a235350782143fcf1ed1b7e4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_b0180be2d5618820c2dd93bc9e840bea96689d29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\3e83cb9fc59f380cac7bf38956a8b0e27a5f8735\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_90da4dd57c9a14697c21dc4e7e5c681d583b00aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\67eeb3edcd52f58748c4568d849e13d0cc35ad16\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_690cfd0651fdffad19fdb98a2e292d6d34f6d978.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.3.0\bcacde6a8ccedcc56c127403d26b76072fe6214d\retrofit-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bcacde6a8ccedcc56c127403d26b76072fe6214d">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\retrofit-2.3.0_f42ed633c4dc3591e6bb340fbaa100d18056ad28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\okio-1.13.0_be8a987cd8efbd5b169e2bc78a1446bb1a87779c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.8.0\9bada650e1afe9c6174ddc0d113c1fce4dc26fe0\glide-3.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9bada650e1afe9c6174ddc0d113c1fce4dc26fe0">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\glide-3.8.0_0de18edcce8686bffd3439a1ac2b2ed72fb8ff91.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.3.0\9e09011e9767bb76b5e27c9b8223476b93b14631\converter-gson-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9e09011e9767bb76b5e27c9b8223476b93b14631">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\converter-gson-2.3.0_d8d1c7eade41d9c8a3f812bf7d178fd5e463aa56.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\5d3d470c72e88aa8315e38f0ad911254395fa1ad\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_e4120bb63e0888d70cad32585ba5da78c5068706.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\c9d2cf18c7aa882120582ab956b95d09e24285a3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_32fa66736f35a79726eae9c09e08406016a51603.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.android\build-cache\d769e88c8628c23a3db3695ddf5092edc89119b4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\classes_82d5991f6c6f0a2d091ccac8045f6bcb4ed0be42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.9.0\1b6c10b5120995a7542c1a31b7828fb8593c8ba\okhttp-3.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="01b6c10b5120995a7542c1a31b7828fb8593c8ba">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\okhttp-3.9.0_ab7263466d445e42bb3458faa8bd6dfaf09c28bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_8d5ff1598701c8d2711bcc4e76b5fddff6a1e95e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\intel\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.9.0\3bf7f8d6a20c90ffe9fc3f3c9118193c7720ecf1\logging-interceptor-3.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3bf7f8d6a20c90ffe9fc3f3c9118193c7720ecf1">
+        <dex dex="C:\Users\intel\Documents\ann\draft\app\build\intermediates\pre-dexed\debug\logging-interceptor-3.9.0_5ca09c1ce861fc02c2121eb65647cde48a539cc1.jar" />
     </item>
 
 </items>

@@ -11,6 +11,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tif.tesyant.mov.adapter.CustomAdapter;
+import com.tif.tesyant.mov.adapter.CustomItemClickListener;
 import com.tif.tesyant.mov.adapter.MovieAdapter;
 import com.tif.tesyant.mov.model.Results;
 import com.tif.tesyant.mov.model.SearchMovie;
@@ -95,11 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button.setOnClickListener(this);
 
         editText.getText().toString();
-
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-
-
     }
 
     @Override
@@ -138,21 +137,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (int i = 0; i < result_size; i++) {
                     list_movie_id[i] = String.valueOf(mSearch.getResults().get(i).getId());
                 }
-
                 List<Results> mov = mSearch.getResults();
-                CustomAdapter listAdapter = new CustomAdapter(mov, MainActivity.this);
-                recyclerView.setAdapter(listAdapter);
-                recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                CustomAdapter listAdapter = new CustomAdapter(mov, MainActivity.this, new CustomItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        String id = list_movie_id[i];
-                        Toast.makeText(MainActivity.this, "ID = " + id, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, DetailListActivity.class);
-                        intent.putExtra("movieId", id);
-                        startActivity(intent);
+                    public void onItemClick(View v, int position) {
+                        Toast.makeText(MainActivity.this, "Position : " + position, Toast.LENGTH_SHORT).show();
                     }
                 });
-                listView.setVisibility(View.VISIBLE);
+                LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
+                llm.setOrientation(LinearLayoutManager.VERTICAL);
+                recyclerView.setLayoutManager(llm);
+                recyclerView.setAdapter(listAdapter);
+//                recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+//                    @Override
+//                    public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+//                        return false;
+//                    }
+//
+//                    @Override
+//                    public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+//
+//                    }
+//                });
+//                recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                        String id = list_movie_id[i];
+//                        Toast.makeText(MainActivity.this, "ID = " + id, Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(MainActivity.this, DetailListActivity.class);
+//                        intent.putExtra("movieId", id);
+//                        startActivity(intent);
+//                    }
+//                });
+//                listView.setVisibility(View.VISIBLE);
             }
 
             @Override
