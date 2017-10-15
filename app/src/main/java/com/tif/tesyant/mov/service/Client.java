@@ -27,5 +27,3 @@ public interface Client {
     @GET("3/movie/now_playing")
     Call<NowPlaying> getPlaying (@Query("api_key") String api_key, @Query("language") String language);
 }
-
-

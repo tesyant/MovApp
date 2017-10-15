@@ -4,16 +4,15 @@ import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,7 +20,6 @@ import android.widget.Toast;
 
 import com.tif.tesyant.mov.adapter.CustomAdapter;
 import com.tif.tesyant.mov.adapter.CustomItemClickListener;
-import com.tif.tesyant.mov.adapter.MovieAdapter;
 import com.tif.tesyant.mov.model.Results;
 import com.tif.tesyant.mov.model.SearchMovie;
 import com.tif.tesyant.mov.service.Client;
@@ -35,9 +33,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static android.R.attr.data;
-import static android.R.id.list;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -83,11 +78,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         trigerTime = SystemClock.elapsedRealtime();
         Log.e("Triger", "triger time saved on : " + trigerTime);
         long repeatInterval = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
-        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, trigerTime, repeatInterval, notifyPendingIntent);
+
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        Boolean dailyPref = sharedPreferences.getBoolean(SettingsActivity.KEY_DAILY_SWITCH, false);
+        //Boolean upcomingPref = sharedPreferences.getBoolean(SettingsActivity.KEY_UPCOMING_SWITCH, false);
+
+        if (dailyPref) {
+            alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, trigerTime, repeatInterval, notifyPendingIntent);
+        }
+        else {
+            alarmManager.cancel(notifyPendingIntent);
+            mNotificationManager.cancelAll();
+            Toast.makeText(this, "dailycanceled", Toast.LENGTH_SHORT).show();
+        }
+
+
 
         //Upcoming Scheduller
         schedullerTask = new SchedullerTask(this);
-        schedullerTask.createPeriodicTask();
+
+        if (dailyPref) {
+            schedullerTask.createPeriodicTask();
+        }
+        else {
+            schedullerTask.cancelPeriodicTask();
+        }
 
         editText = (EditText)findViewById(R.id.edt_search);
         button = (Button)findViewById(R.id.btn_search);
@@ -99,6 +116,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editText.getText().toString();
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
+
+
     }
 
     @Override
@@ -158,5 +177,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
 
 }

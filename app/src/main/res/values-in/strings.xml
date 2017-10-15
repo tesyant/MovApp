@@ -1,13 +1,22 @@
 <resources>
     <string name="app_name">Mov</string>
-    <string name="string_search">SEARCH</string>
+    <string name="string_search">CARI</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main2">Main2Activity</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Buka navigasi</string>
+    <string name="navigation_drawer_close">Tutup Navigasi</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="setting_locale">Atur Bahasa</string>
+    <string name="notification">Notifikasi</string>
+    <string name="title_dailyremind">Notifikasi</string>
+    <string name="summary_dailyremind">Nyalakan/matikan notifikasi</string>
+    <string name="title_upcomingremind">Notifikasi Film Terbaru</string>
+    <string name="summary_upcomingremind">Nyalakan/matikan notifikasi film terbaru</string>
+    <string name="settings">Pengaturan</string>
+    <string name="change_your_phone_localization">Ubah Lokalisasi</string>
+    <string name="setting_language">Bahasa</string>
 </resources>

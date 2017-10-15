@@ -7,7 +7,14 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <application
+    <application>
+        <permission
+            android:name="com.tif.tesyant.mov.READ_DATABASE"
+            android:protectionLevel="normal" />
+        <permission
+            android:name="com.tif.tesyant.mov.WRITE_DATABASE"
+            android:protectionLevel="normal" />
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,6 +25,7 @@
             android:name=".Main2Activity"
             android:theme="@style/AppTheme">
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -42,10 +50,25 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main2" />
-        <activity android:name=".fragment.FragmentUpcomingMovie" />
         <activity android:name=".UpcomingActivity" />
         <activity android:name=".NowPlayActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SettingsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".FavouriteActivity"></activity>
+        <provider
+            android:name=".provider.FavouriteProvider"
+            android:authorities="com.tif.tesyant.mov"
+            android:exported="true"
+            android:readPermission="com.tif.tesyant.mov.READ_DATABASE"
+            android:writePermission="com.tif.tesyant.mov.WRITE_DATABASE"/>
+
     </application>
 
 </manifest>
