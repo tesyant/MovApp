@@ -2,6 +2,7 @@ package com.tif.tesyant.mov;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,17 +16,13 @@ import android.view.MenuItem;
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-//
-//        fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction mFragmentTransaction = fragmentManager.beginTransaction();
-//        fragment = new FragmentNowPlaying();
-//        mFragmentTransaction.replace(R.id.nowplay, fragment);
-//        mFragmentTransaction.commit();
-//
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -38,6 +35,11 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
 
     }
 
@@ -67,7 +69,13 @@ public class Main2Activity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.action_language) {
+            Intent intent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -90,10 +98,6 @@ public class Main2Activity extends AppCompatActivity
 
         else if (id == R.id.nav_nowplay) {
             startActivity(new Intent(getApplicationContext(), NowPlayActivity.class));
-        }
-
-        else if (id == R.id.nav_setting) {
-            startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -16,13 +16,13 @@
             android:title="Search" />
     </group>
 
-    <item android:title="Preference">
-        <menu>
-            <item
-                android:id="@+id/nav_setting"
-                android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Settings" />
-        </menu>
-    </item>
+    <!--<item android:title="Preference">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_setting"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Settings" />-->
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

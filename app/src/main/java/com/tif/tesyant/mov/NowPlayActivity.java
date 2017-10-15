@@ -3,10 +3,11 @@ package com.tif.tesyant.mov;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
+import com.tif.tesyant.mov.adapter.CustomItemClickListener;
 import com.tif.tesyant.mov.adapter.NowPlayAdapter;
 import com.tif.tesyant.mov.model.nowPlaying.NowPlaying;
 import com.tif.tesyant.mov.model.nowPlaying.Result;
@@ -27,14 +28,15 @@ import static com.tif.tesyant.mov.MainActivity.LANG;
 
 public class NowPlayActivity extends Activity {
 
-    private ListView listView;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_play);
 
-        listView = (ListView)findViewById(R.id.listitem);
+        recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
 
         OkHttpClient.Builder okhttpClientBuilder = new OkHttpClient.Builder();
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
@@ -63,18 +65,21 @@ public class NowPlayActivity extends Activity {
 
 
                 List<Result> result = nowplaying.getResults();
-                NowPlayAdapter listAdapter = new NowPlayAdapter(result, NowPlayActivity.this);
-                listView.setAdapter(listAdapter);
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                NowPlayAdapter listAdapter = new NowPlayAdapter(result, NowPlayActivity.this, new CustomItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        String id = list_movie_id[i];
+                    public void onItemClick(View v, int position) {
+                        String id = list_movie_id[position];
                         Intent intent = new Intent(NowPlayActivity.this, DetailListActivity.class);
                         intent.putExtra("movieId", id);
                         startActivity(intent);
                     }
                 });
-                listView.setVisibility(View.VISIBLE);
+                LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
+                llm.setOrientation(LinearLayoutManager.VERTICAL);
+                recyclerView.setLayoutManager(llm);
+                recyclerView.setAdapter(listAdapter);
+
+
             }
 
             @Override
