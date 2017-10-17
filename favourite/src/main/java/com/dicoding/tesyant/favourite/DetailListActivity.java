@@ -1,9 +1,13 @@
 package com.dicoding.tesyant.favourite;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,11 +23,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DetailListActivity extends Activity {
+public class DetailListActivity extends Activity implements View.OnClickListener {
 
     private TextView tvTitle, tvRate, tvRelease, tvOverview;
     private ImageView imgCover, imgHeader;
-
+    private ImageButton imgButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,6 @@ public class DetailListActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-
 
         OkHttpClient.Builder okhttpClientBuilder = new OkHttpClient.Builder();
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
@@ -46,7 +49,6 @@ public class DetailListActivity extends Activity {
 
         Retrofit retrofit = builder.build();
 
-
         tvTitle = (TextView)findViewById(R.id.detail_title);
         tvRelease = (TextView)findViewById(R.id.detail_release_date);
         tvRate = (TextView)findViewById(R.id.detail_rate);
@@ -54,6 +56,9 @@ public class DetailListActivity extends Activity {
 
         imgCover = (ImageView) findViewById(R.id.img_cover);
         imgHeader = (ImageView) findViewById(R.id.imgView_banner);
+
+        imgButton = (ImageButton)findViewById(R.id.btn_fav);
+        imgButton.setOnClickListener(this);
 
 
         Intent intent = getIntent();
@@ -94,5 +99,35 @@ public class DetailListActivity extends Activity {
         Log.e("coba", "ya");
         Glide.with(this).load("http://image.tmdb.org/t/p/w185" + cover).into(imgCover);
         Glide.with(this).load("http://image.tmdb.org/t/p/w185" + header).into(imgHeader);
+    }
+
+    @Override
+    public void onClick(View view) {
+        boolean isFavourite = readState();
+
+        if (isFavourite) {
+            imgButton.setBackgroundResource(R.drawable.ic_star_black_24dp);
+            isFavourite = false;
+            saveState(isFavourite);
+        }
+
+        else {
+            imgButton.setBackgroundResource(R.drawable.ic_star_border_black_24dp);
+            isFavourite = true;
+            saveState(isFavourite);
+        }
+
+    }
+
+    private void saveState(boolean isFavourite) {
+        SharedPreferences sharedPreferences = this.getSharedPreferences("Favourite", Context.MODE_PRIVATE);
+        SharedPreferences.Editor sharedPreferencesEdit = sharedPreferences.edit();
+        sharedPreferencesEdit.putBoolean("State", isFavourite);
+        sharedPreferencesEdit.commit();
+    }
+
+    private boolean readState() {
+        SharedPreferences sharedPreferences = this.getSharedPreferences("Favourite", Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("State", true);
     }
 }

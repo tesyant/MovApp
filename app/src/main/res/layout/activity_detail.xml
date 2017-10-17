@@ -1,53 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imgView_banner"
         android:layout_width="match_parent"
         android:layout_height="175dp"
-        android:layout_marginBottom="@dimen/activity_margin"/>
+        android:layout_marginBottom="@dimen/activity_margin" />
 
     <ImageView
         android:id="@+id/img_cover"
         android:layout_width="175dp"
         android:layout_height="225dp"
-        android:layout_below="@id/imgView_banner"/>
+        android:layout_below="@id/imgView_banner" />
+
+    <ImageButton
+        android:id="@+id/btn_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star_border_black_24dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/imgView_banner"
+        android:layout_toRightOf="@id/img_cover"/>
 
     <TextView
         android:id="@+id/detail_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/img_cover"
-        android:layout_below="@id/imgView_banner"
+        android:padding="@dimen/activity_margin"
         android:textStyle="bold"
-        android:padding="@dimen/activity_margin"/>
+        android:layout_below="@id/btn_fav"/>
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btn_bintang"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/imgView_banner"-->
+        <!--android:layout_toRightOf="@id/img_cover"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:padding="@dimen/activity_vertical_margin"-->
+        <!--android:src="@drawable/ic_star_border_black_24dp" />-->
 
     <TextView
         android:id="@+id/detail_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/img_cover"
         android:layout_below="@id/detail_title"
-        android:padding="@dimen/activity_margin"/>
+        android:layout_toRightOf="@id/img_cover"
+        android:padding="@dimen/activity_margin" />
 
     <TextView
         android:id="@+id/detail_release_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/img_cover"
-        android:layout_below="@id/detail_rate"
-        android:padding="@dimen/activity_margin"/>
+        android:layout_below="@+id/detail_rate"
+        android:layout_toEndOf="@+id/img_cover"
+        android:padding="@dimen/activity_margin" />
+
+    <TextView
+        android:id="@+id/title_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_cover"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="Overview"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/detail_overview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img_cover"
-        android:padding="@dimen/activity_margin"/>
+        android:layout_below="@id/title_overview"
+        android:padding="@dimen/activity_margin" />
 
 
 </RelativeLayout>

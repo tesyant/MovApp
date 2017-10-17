@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.dicoding.tesyant.favourite.model.CustomItemClickListener;
-import com.dicoding.tesyant.favourite.model.Results;
+import com.dicoding.tesyant.favourite.model.search.Results;
 
 import java.util.List;
 

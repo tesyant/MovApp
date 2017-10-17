@@ -1,6 +1,7 @@
 package com.dicoding.tesyant.favourite.model;
 
 import com.dicoding.tesyant.favourite.model.detail.DetailActivity;
+import com.dicoding.tesyant.favourite.model.search.SearchMovie;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,5 +1,5 @@
 
-package com.dicoding.tesyant.favourite.model;
+package com.dicoding.tesyant.favourite.model.search;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

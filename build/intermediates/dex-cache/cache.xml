@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/tesyant/MovApp/favourite/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/tesyant/MovApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/tesyant/MovApp/favourite/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8925bc40230055d2ab27074549f98b6df2cffcba/classes.dex" />
+        <dex dex="/Users/tesyant/MovApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5035ef0b67509465afcac851067a0e2f7ef30efc/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/tesyant/MovApp/favourite/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/tesyant/MovApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
-        sha1="e66d5c6d1d344dff255cd87dd515e63e0cdddad7">
-        <dex dex="/Users/tesyant/MovApp/favourite/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f5a4a4416564672f007c83b3609f72653f01d98a/classes.dex" />
+        sha1="74cfaa6f673066061778b87b456621e2c17b112b">
+        <dex dex="/Users/tesyant/MovApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_67de87ed9ad1f3dc32682b0ef8b450d4e4291fdb/classes.dex" />
     </item>
 
 </items>
